@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>774223035404-t4ij1bvuflc9nmal2gvllhe1tkt0953r.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.774223035404-t4ij1bvuflc9nmal2gvllhe1tkt0953r</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBZM6lePMygzx30NeSjyh0km4HrRmuxag0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>774223035404</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.mebnapp3.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>mebn-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mebn-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:774223035404:ios:75c8183d730d170c2cc229</string>
+</dict>
+</plist>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "776894250115",
+    "project_id": "mebnapp3",
+    "storage_bucket": "mebnapp3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776894250115:android:4be1b405813845de18efb6",
+        "android_client_info": {
+          "package_name": "com.example.mebnapp3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776894250115-h7jbkgsa0qee0hc402eu5qloquh45mn4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk-f1gCk7zXbsjJuFE2FEdgYHUxG_zaPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776894250115-h7jbkgsa0qee0hc402eu5qloquh45mn4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
