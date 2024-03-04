@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:flutter_translate/flutter_translate.dart';
+
 
 class NavBar extends StatelessWidget {
   final int pageIndex;
@@ -22,23 +25,28 @@ class NavBar extends StatelessWidget {
           gap: 8,
           selectedIndex: pageIndex,
           onTabChange: onTabChange,
+          
           padding: EdgeInsets.all(16),
-          tabs: const [
+          tabs:  [
             GButton(
               icon: Icons.home,
-              text: 'Home',
+              text: translate('app_bar.title.homepagetitle'),
+              textStyle: GoogleFonts.fredoka(textStyle: TextStyle(color: Color.fromARGB(255, 255, 255, 255))),              
             ),
             GButton(
               icon: Icons.favorite,
               text: 'Ministries',
+              textStyle: GoogleFonts.fredoka(textStyle: TextStyle(color: Color.fromARGB(255, 255, 255, 255))),              
             ),
             GButton(
               icon: Icons.auto_stories,
               text: 'About Us',
+              textStyle: GoogleFonts.fredoka(textStyle: TextStyle(color: Color.fromARGB(255, 255, 255, 255))),              
             ),
             GButton(
               icon: Icons.settings,
-              text: 'Setting',
+              text: translate('app_bar.title.settingstitle'),
+              textStyle: GoogleFonts.fredoka(textStyle: TextStyle(color: Color.fromARGB(255, 255, 255, 255))),              
             ),
           ],
         ),

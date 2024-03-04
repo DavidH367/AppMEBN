@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mebnapp3/components/nabvar.dart';
 
 class Ministries extends StatelessWidget {
   final PageController pageController;
