@@ -14,13 +14,12 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_translate/src/widgets/localized_app.dart';
 
 
-//import 'login_page.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  
 
   var delegate = await LocalizationDelegate.create(
         fallbackLocale: 'en_US',
@@ -116,11 +115,7 @@ class MyApp extends StatelessWidget {
             );
           } else {
             // Si no hay un usuario autenticado, muestra la página de inicio de sesión
-            return LoginPage(
-              showRegisterPage: () {
-                // Aquí va tu código para mostrar la página de registro
-              },
-            );
+            return LoginPage();
           }
         },
       ),

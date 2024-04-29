@@ -26,7 +26,10 @@ dependencies:
   intl: ^0.18.0
   shared_preferences: ^2.2.2
   localization: ^2.1.1
+  carousel_slider: ^4.0.0
   getwidget: ^2.0.4
+  country_picker: ^2.0.21
+  
   flutter_localizations:
     sdk: flutter
   

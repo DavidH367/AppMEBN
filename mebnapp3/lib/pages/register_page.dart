@@ -1,18 +1,26 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_translate/flutter_translate.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:mebnapp3/pages/login_page.dart';
+import 'package:country_picker/country_picker.dart';
 
 class RegisterPage extends StatefulWidget {
-  final VoidCallback showLoginPage;
-  const RegisterPage({super.key, required this.showLoginPage});
+  const RegisterPage({super.key});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+// Define un método para navegar a la página de registro
+  void navigateToLoginPage(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return LoginPage();
+    }));
+  }
+
   //text controllers
   final _firstNameController = TextEditingController();
   final _lastNameController = TextEditingController();
@@ -20,6 +28,8 @@ class _RegisterPageState extends State<RegisterPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmpasswordController = TextEditingController();
+  String _selectedCountry = 'United States'; // Initial country code
+
   // Obtener el ID del usuario autenticado
   List<String> countryNames = [
     "United States",
@@ -121,7 +131,6 @@ class _RegisterPageState extends State<RegisterPage> {
     "Turkmenistan",
     "Kyrgyzstan",
   ];
-  String _selectedCountry = "United States";
 
   @override
   void dispose() {
@@ -185,27 +194,36 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize:
+            Size.fromHeight(40.0), // Ajusta este valor según tu preferencia
+        child: AppBar(
+          title: Text(translate('app_bar.title.registerpageTitle')),
+          centerTitle: true,
+          backgroundColor: Color.fromRGBO(20, 78, 119, 1.0),
+        ),
+      ),
       backgroundColor: Color.fromARGB(255, 233, 255, 227),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color.fromARGB(255, 131, 199, 165),
-              const Color.fromARGB(255, 255, 255, 255)
+              Color.fromRGBO(197, 43, 4, 0.698),
+              Color.fromRGBO(20, 78, 119, 0.5)
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
         ),
         child: SafeArea(
-          child: Center(
-            child: SingleChildScrollView(
+          child: SingleChildScrollView(
+            child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //logo
                   Image.asset(
-                    'assets/images/logo.png',
+                    'assets/images/NEW_MEBN_LOGO.png',
                     height: 110,
                     width: 300,
                   ),
@@ -430,7 +448,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       child: Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 48, 97, 48),
+                          color: Color.fromRGBO(20, 78, 119, 1.0),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: const Center(
@@ -444,30 +462,6 @@ class _RegisterPageState extends State<RegisterPage> {
                         )),
                       ),
                     ),
-                  ),
-                  SizedBox(height: 20),
-
-                  //not a member aun
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Already a member?',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: widget.showLoginPage,
-                        child: Text(
-                          'Login Now',
-                          style: TextStyle(
-                            color: Colors.blue,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ],
                   ),
 
                   SizedBox(height: 60),

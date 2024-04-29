@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -26,7 +25,7 @@ class _SettingsPageState extends State<SettingsPage> {
       appBar: AppBar(
         title: Text(translate('app_bar.title.settingstitle')),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 20, 39, 20),
+        backgroundColor: Color.fromRGBO(20, 78, 119, 1.0),
       ),
       body: Center(
         child: Column(

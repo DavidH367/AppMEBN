@@ -4,7 +4,9 @@
 		"title":
 		{
 			"homepagetitle" :"NEWS",
-			"settingstitle":"SETTINGS"
+			"settingstitle":"SETTINGS",
+			"registerpageTitle":"REGISTER",
+			"ministriespageTitle":"MINISTRIES"
 		}
 	},
 	"button": 

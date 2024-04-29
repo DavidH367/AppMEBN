@@ -14,19 +14,19 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromARGB(255, 20, 39, 20),
+      color: Color.fromRGBO(20, 78, 119, 1.0),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 13.0, vertical: 11),
+        padding: const EdgeInsets.symmetric(horizontal: 13.0, vertical: 6),
         child: GNav(
-          backgroundColor: Color.fromARGB(255, 20, 39, 20),
+          backgroundColor: Color.fromRGBO(20, 78, 119, 1.0),
           color: Colors.white,
           activeColor: Colors.white,
-          tabBackgroundColor: Colors.grey.shade600,
-          gap: 8,
+          tabBackgroundColor: Color.fromRGBO(193, 70, 39, 1.0),
+          gap: 2,
           selectedIndex: pageIndex,
           onTabChange: onTabChange,
           
-          padding: EdgeInsets.all(16),
+          padding: EdgeInsets.all(10),
           tabs:  [
             GButton(
               icon: Icons.home,
